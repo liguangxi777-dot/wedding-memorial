@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房宇轩 & 陈晓宇 - 结婚纪念</title>
+    <link rel="icon" href="https://www.apple.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.apple.com/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset and Variables */
+        :root {
+            --primary-bg: #f5f5f7; /* Light grey */
+            --secondary-bg: #ffffff; /* White */
+            --text-dark: #1d1d1f; /* Dark text */
+            --text-light: #6e6e73; /* Lighter text for secondary info */
+            --accent-color: #007aff; /* Apple Blue */
+            --border-color: #e8e8ed;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            --radius-large: 12px;
+            --radius-small: 8px;
+        }
+
+        body, h1, h2, p, div, span {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--secondary-bg);
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow);
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+        }
+
+        .names {
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            letter-spacing: -0.01em;
+        }
+
+        .date-label {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .date-value {
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+            display: inline-block; /* For consistent baseline if needed */
+        }
+
+        .timer-heading {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        #countdown {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--text-dark);
+            letter-spacing: -0.03em;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between time units */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .time-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px; /* Ensure consistent width for units */
+        }
+
+        .time-value {
+            font-size: 42px; /* Larger for the number */
+            font-weight: 600;
+            color: var(--accent-color);
+            line-height: 1.1; /* Tighter line height */
+        }
+
+        .time-label {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 5px;
+            white-space: nowrap; /* Prevent label from breaking */
+        }
+
+        footer {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            h1 {
+                font-size: 38px;
+            }
+            .names {
+                font-size: 24px;
+            }
+            .date-value {
+                font-size: 20px;
+            }
+            .timer-heading {
+                font-size: 18px;
+            }
+            #countdown {
+                font-size: 30px;
+                gap: 15px;
+            }
+            .time-unit {
+                min-width: 70px;
+            }
+            .time-value {
+                font-size: 36px;
+            }
+            .time-label {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 15px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .names {
+                font-size: 20px;
+            }
+            .date-value {
+                font-size: 18px;
+            }
+            .timer-heading {
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            #countdown {
+                font-size: 26px;
+                gap: 10px;
+            }
+            .time-unit {
+                min-width: unset; /* Allow smaller width on tiny screens */
+                flex-basis: 45%; /* Two columns */
+                margin-bottom: 15px;
+            }
+             .time-value {
+                font-size: 30px;
+            }
+            .time-label {
+                font-size: 13px;
+                margin-top: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>永恒的爱</h1>
+        <div class="names">
+            房宇轩 &amp; 陈晓宇
+        </div>
+
+        <div class="date-label">我们的结婚日期：</div>
+        <div class="date-value">2025年10月17日</div>
+
+        <div class="timer-heading">我们已相守：</div>
+        <div id="countdown">
+            <div class="time-unit">
+                <span class="time-value" id="days">00</span>
+                <span class="time-label">天</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">小时</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">分钟</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">秒</span>
+            </div>
+        </div>
+
+        <footer>
+            祝愿新婚快乐，白头偕老！
+        </footer>
+    </div>
+
+    <script>
+        // 设置结婚日期 (年, 月-1, 日)
+        const weddingDate = new Date('2025-10-17T00:00:00'); // T00:00:00 ensures it's midnight on that day
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeDifference = now - weddingDate; // 毫秒差
+
+            if (timeDifference < 0) {
+                // 如果结婚日期还在未来
+                document.getElementById('countdown').innerHTML = `<div class="time-unit"><span class="time-value">未来</span><span class="time-label">敬请期待</span></div>`;
+                document.querySelector('.timer-heading').textContent = '距离结婚还有：';
+                // 可以再加入倒计时功能，这里只做简单显示
+                return;
+            }
+
+            const seconds = Math.floor((timeDifference / 1000) % 60);
+            const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+            const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            // 格式化输出，确保总是两位数
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // 每秒更新一次计时器
+        setInterval(updateCountdown, 1000);
+
+        // 页面加载时立即更新一次，避免首次加载延迟
+        updateCountdown();
+    </script>
+</body>
+</html>
